@@ -364,8 +364,8 @@ width: 100px;
           <h2 class="section-heading text-uppercase">Locate Us</h2>
         </div>
       </div>
-       <div class="container-fluid" style="text-align: center; margin-top: 50px;">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.2087038210166!2d72.58554081428373!3d23.089454669620725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e83be45679cc7%3A0xe3ba86e1a12de7f6!2sJawahar+Chowk%2C+Ram+Nagar%2C+Sabarmati%2C+Ahmedabad%2C+Gujarat+380005!5e0!3m2!1sen!2sin!4v1563719644250!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+       <div class="container-fluid">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.2087038210166!2d72.58554081428373!3d23.089454669620725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e83be45679cc7%3A0xe3ba86e1a12de7f6!2sJawahar+Chowk%2C+Ram+Nagar%2C+Sabarmati%2C+Ahmedabad%2C+Gujarat+380005!5e0!3m2!1sen!2sin!4v1563719644250!5m2!1sen!2sin" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
     <script>
       </div>
   </section>
@@ -615,51 +615,7 @@ width: 100px;
       </div>
     </div>
   </div>
-
-      // Note: This example requires that you consent to location sharing when
-      // prompted by your browser. If you see the error "The Geolocation service
-      // failed.", it means you probably did not give permission for the browser to
-      // locate you.
-      var map, infoWindow;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 6
-        });
-        infoWindow = new google.maps.InfoWindow;
-
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: coords.latitude,
-              lng: position.coords.longitude
-            };
-
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            infoWindow.open(map);
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-      }
-
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB1zblsPcob22IKJPjROmCdplvbqwv9tg&callback=initMap">
-    </script>
+    
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
